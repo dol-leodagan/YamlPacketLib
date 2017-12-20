@@ -1,0 +1,25 @@
+FirstPacketAndCryptKey:
+  From: Client
+  Code: 0xF4
+  Version: 1115
+  Revision: c
+  MinimumSize: 7
+  Body:
+  - TypeAndAddons:
+      Type: TypeAndAddons
+      Size: 1
+  - Version:
+      Type: Version
+      Size: 3
+  - Revision:
+      Type: char
+      Size: 1
+  - Serial:
+      Type: number
+      Size: 2
+  - CryptKey:
+      Count:
+        Type: low endian number
+        Size: 2
+      Type: binary
+      Optional: true

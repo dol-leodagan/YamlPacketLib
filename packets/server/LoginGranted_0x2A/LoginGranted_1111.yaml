@@ -1,0 +1,27 @@
+LoginGranted:
+  From: Server
+  Code: 0x2A
+  Version: 1111
+  Body:
+  - AccountName:
+      Count:
+        Type: number
+        Size: 1
+      Type: string
+  - ServerName:
+      Count:
+        Type: number
+        Size: 1
+      Type: string
+  - ServerId:
+      Type: number
+      Size: 1
+  - ColorHandling:
+      Type: number
+      Size: 1
+  - TrialAccount:
+      Type: boolean
+      Size: 1
+  - TypeAndAddons:
+      Type: TypeAndAddons
+      Size: 1

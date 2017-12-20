@@ -1,0 +1,13 @@
+Version:
+  Version: 168
+  FixedSize: 3
+  Body:
+  - Major:
+      Type: number
+      Size: 1
+  - Minor:
+      Type: number
+      Size: 1
+  - Build:
+      Type: number
+      Size: 1

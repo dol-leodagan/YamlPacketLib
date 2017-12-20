@@ -1,0 +1,18 @@
+LoginGranted:
+  From: Server
+  Code: 0x2C
+  Version: 1115
+  Revision: c
+  Body:
+  - Reason:
+      Type: LoginDeniedReason
+      Size: 1
+  - VersionString:
+      Type: string
+      Size: 5
+  - Build:
+      Version: char
+      Size: 1
+  - Serial:
+      Version: number
+      Size: 2

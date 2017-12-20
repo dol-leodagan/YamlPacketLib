@@ -1,0 +1,33 @@
+LoginGranted:
+  From: Server
+  Code: 0x2A
+  Version: 174
+  Body:
+  - IsShroudedIsles:
+      Type: boolean
+      Size: 1
+  - Version:
+      Type: Version
+      Size: 3
+  - AccountName:
+      Count:
+        Type: number
+        Size: 1
+      Type: string
+  - ServerName:
+      Count:
+        Type: number
+        Size: 1
+      Type: string
+  - ServerId:
+      Type: number
+      Size: 1
+  - ColorHandling:
+      Type: number
+      Size: 1
+  - TrialAccount:
+      Type: boolean
+      Size: 1
+  - TypeAndAddons:
+      Type: TypeAndAddons
+      Size: 1

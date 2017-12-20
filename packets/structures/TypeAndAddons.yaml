@@ -1,0 +1,23 @@
+TypeAndAddons:
+  Version: 168
+  FixedSize: 1
+  Body:
+  - Type:
+      Type: enumeration
+      BitRange: 0..3
+      Values:
+      - 0: Unknown
+      - 1: Classic
+      - 2: Shrouded Isles
+      - 3: Trial of Atlantis
+      - 4: Catacombs
+      - 5: Darkness Rising
+      - 6: Labyrinth Of The Minotaur
+  - Addons:
+      Type: flags
+      BitRange: 4..7
+      Values:
+      - 1: Unknown
+      - 2: New New Frontiers
+      - 4: Fondations
+      - 8: New Frontiers

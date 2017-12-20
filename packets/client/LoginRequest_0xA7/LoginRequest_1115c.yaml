@@ -1,0 +1,29 @@
+LoginRequest:
+  From: Client
+  Code: 0xA7
+  Version: 1115
+  Revision: c
+  MinimumSize: 11
+  Body:
+  - TypeAndAddons:
+      Type: TypeAndAddons
+      Size: 1
+  - Version:
+      Type: Version
+      Size: 3
+  - Revision:
+      Type: char
+      Size: 1
+  - Serial:
+      Type: number
+      Size: 2
+  - AccountName:
+      Count:
+        Type: low endian number
+        Size: 2
+      Type: string
+  - Password:
+      Count:
+        Type: low endian number
+        Size: 2
+      Type: string

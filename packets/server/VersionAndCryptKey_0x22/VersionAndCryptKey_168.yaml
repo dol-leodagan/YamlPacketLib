@@ -1,0 +1,15 @@
+VersionAndCryptKey:
+  From: Server
+  Code: 0x22
+  Version: 168
+  FixedSize: 5
+  Body:
+  - Encryption:
+      Type: boolean
+      Size: 1
+  - TypeAndAddons:
+      Type: TypeAndAddons
+      Size: 1
+  - Version:
+      Type: Version
+      Size: 3

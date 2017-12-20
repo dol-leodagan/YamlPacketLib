@@ -1,0 +1,33 @@
+LoginDeniedReason:
+  Version: 168
+  FixedSize: 1
+  Body:
+  - Reason:
+      Type: enumeration
+      Size: 1
+      Values:
+      - 0x01: Wrong Password # "Your Password is Incorrect!"
+      - 0x02: Account Invalid # "Your Account is Invalid!"
+      - 0x03: Authorization Server Unavailable # "The Authorization Server is Unavailable!"
+      - 0x04: Unknown 0
+      - 0x05: Client Version Too Low # "You do not have the latest version!"
+      - 0x06: Cannot Access User Account # "Error Accessing User Account!"
+      - 0x07: Account Not Found # "No Record for User Found!"
+      - 0x08: Account No Access Any Game # "Your account has no access to any games!"
+      - 0x09: Account No Access This Game # "Your account has no access to this game!"
+      - 0x0a: Account Closed # "Your account has been closed!"
+      - 0x0b: Account Already Logged In # "Your account is already logged in!"
+      - 0x0c: Too Many Players Logged In # "Too many Players are logged in. Please try later."
+      - 0x0d: Game Currently Closed # "The game is currently closed. Please try later."
+      - 0x0e: Unknown 1
+      - 0x0f: Unknown 2
+      - 0x10: Account Already Logged In to Other Server # "Your account is already logged in to a different server!"
+      - 0x11: Account Is In Logout Procedure # "Your account is being logged out! Try back in 1 minute."
+      - 0x12: Expansion Packet Not Allowed # "You have not been invited to join this server type."
+      - 0x13: Account Is Banned From This Server Type # "Your account is banned from this server type."
+      - 0x14: Cafe Is Out Of Playing Time # "The Cafe you are connecting through is out of playing time."
+      - 0x15: Personal Account Is Out Of Time # "Your personal account is out of time."
+      - 0x16: Cafes Account Is Suspended # "The Cafe's account is suspended."
+      - 0x17: Not Authorized To Use Expansion Version # "You are not authorized to use the expansion version!"
+      - 0x18: Unknown 3
+      - 0xaa: Service Not Available

@@ -1,0 +1,14 @@
+LoginGranted:
+  From: Server
+  Code: 0x2C
+  Version: 168
+  Body:
+  - Reason:
+      Type: LoginDeniedReason
+      Size: 1
+  - TypeAndAddons:
+      Type: TypeAndAddons
+      Size: 1
+  - Version:
+      Version: Version
+      Size: 3

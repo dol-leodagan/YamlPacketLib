@@ -1,0 +1,22 @@
+VersionAndCryptKey:
+  From: Server
+  Code: 0x22
+  Version: 1115
+  Revision: c
+  FixedSize: 5
+  Body:
+  - TypeAndAddons:
+      Type: TypeAndAddons
+      Size: 1
+  - Encryption:
+      Type: boolean
+      Size: 1
+  - VersionString:
+      Type: string
+      Size: 5
+  - Revision:
+      Type: char
+      Size: 1
+  - Serial:
+      Type: number
+      Size: 2
