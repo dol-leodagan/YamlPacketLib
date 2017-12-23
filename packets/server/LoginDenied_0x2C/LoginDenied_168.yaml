@@ -1,4 +1,4 @@
-LoginGranted:
+LoginDenied:
   From: Server
   Code: 0x2C
   Version: 168
@@ -10,5 +10,5 @@ LoginGranted:
       Type: TypeAndAddons
       Size: 1
   - Version:
-      Version: Version
+      Type: ClientVersion
       Size: 3

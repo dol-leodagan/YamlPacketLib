@@ -3,7 +3,7 @@ VersionAndCryptKey:
   Code: 0x22
   Version: 1115
   Revision: c
-  FixedSize: 5
+  FixedSize: 8
   Body:
   - TypeAndAddons:
       Type: TypeAndAddons

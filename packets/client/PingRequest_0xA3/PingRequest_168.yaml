@@ -1,0 +1,17 @@
+PingRequest:
+  From: Client
+  Code: 0xA3
+  Version: 168
+  Body:
+  - Unknown0:
+      Type: number
+      Size: 2
+  - Unknown1:
+      Type: number
+      Size: 2
+  - Timestamp:
+      Type: number
+      Size: 4
+  - Unknown2:
+      Type: number
+      Size: 4

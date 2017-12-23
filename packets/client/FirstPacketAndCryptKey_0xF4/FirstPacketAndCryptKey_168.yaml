@@ -2,7 +2,7 @@ FirstPacketAndCryptKey:
   From: Client
   Code: 0xF4
   Version: 168
-  FixedSize:
+  FixedSizes:
   - 5
   - 261
   Body:
@@ -13,7 +13,7 @@ FirstPacketAndCryptKey:
       Type: TypeAndAddons
       Size: 1
   - Version:
-      Type: Version
+      Type: ClientVersion
       Size: 3
   - CryptKey:
       Type: binary

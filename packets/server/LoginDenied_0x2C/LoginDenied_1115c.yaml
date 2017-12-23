@@ -1,4 +1,4 @@
-LoginGranted:
+LoginDenied:
   From: Server
   Code: 0x2C
   Version: 1115
@@ -11,8 +11,8 @@ LoginGranted:
       Type: string
       Size: 5
   - Build:
-      Version: char
+      Type: char
       Size: 1
   - Serial:
-      Version: number
+      Type: number
       Size: 2

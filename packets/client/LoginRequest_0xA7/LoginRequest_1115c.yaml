@@ -9,7 +9,7 @@ LoginRequest:
       Type: TypeAndAddons
       Size: 1
   - Version:
-      Type: Version
+      Type: ClientVersion
       Size: 3
   - Revision:
       Type: char

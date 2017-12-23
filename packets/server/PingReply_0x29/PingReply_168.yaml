@@ -1,0 +1,21 @@
+PingReply:
+  From: Server
+  Code: 0x29
+  Version: 168
+  Body:
+  - Timestamp:
+      Type: number
+      Size: 4
+  - Unknown0:
+      Type: number
+      Size: 4
+  - Sequence:
+      Type: number
+      Size: 2
+  - Unknown1:
+      Type: number
+      Size: 2
+  - Unknown2:
+      Type: number
+      Size: 4
+      
