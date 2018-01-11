@@ -1,0 +1,17 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/packets/client/*/*.yaml",
+                "/packets/server/*/*.yaml"
+            ],
+            "url": "./packet.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/packets/structures/*.yaml"
+            ],
+            "url": "./structure.schema.json"
+        }
+    ]
+}

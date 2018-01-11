@@ -1,0 +1,42 @@
+{
+        "$schema": "http://json-schema.org/draft-06/schema#",
+        "title": "Structure",
+        "description": "Structure used in Network Code Packets",
+        "type": "object",
+        "patternProperties": {
+                "^[a-zA-Z]+$": {
+                        "$ref": "#/definitions/structure"
+                }
+        },
+        "additionalProperties": false,
+        "definitions": {
+                "structure": {
+                        "properties": {
+                                "Version": {
+                                        "description": "Minimum Client Version Compatibility",
+                                        "type": "integer"
+                                },
+                                "Revision": {
+                                        "description": "Minimum Client Version's Revision Compatibility",
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "maxLength": 5
+                                },
+                                "Body": {
+                                        "description": "Structure's Body",
+                                        "$ref": "./body.schema.json"
+                                },
+                                "FixedSize": {
+                                        "description": "Structure's Fixed Size (in bytes)",
+                                        "type": "integer",
+                                        "minimum": 1
+                                }
+                        },
+                        "required": [
+                                "Version",
+                                "Body"
+                        ],
+                        "additionalProperties": false
+                }
+        }
+}

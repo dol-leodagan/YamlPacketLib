@@ -1,0 +1,97 @@
+{
+        "$schema": "http://json-schema.org/draft-06/schema#",
+        "title": "Packet",
+        "description": "Packet used in Network Code",
+        "type": "object",
+        "patternProperties": {
+                "^[a-zA-Z]+$": {
+                        "$ref": "#/definitions/packet"
+                }
+        },
+        "additionalProperties": false,
+        "maxProperties": 1,
+        "definitions": {
+                "packet": {
+                        "type": "object",
+                        "properties": {
+                                "Version": {
+                                        "description": "Minimum Client Version Compatibility",
+                                        "type": "integer",
+                                        "minimum": 168
+                                },
+                                "Revision": {
+                                        "description": "Minimum Client Version's Revision Compatibility",
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "maxLength": 5
+                                },
+                                "Body": {
+                                        "$ref": "./body.schema.json"
+                                },
+                                "From": {
+                                        "description": "Packet Sent From Client or Server ?",
+                                        "type": "string",
+                                        "enum": [
+                                                "Server",
+                                                "Client"
+                                        ]
+                                },
+                                "Code": {
+                                        "description": "Packet's Type Code",
+                                        "type": "integer",
+                                        "minimum": 0,
+                                        "maximum": 255
+                                },
+                                "FixedSize": {
+                                        "description": "Packet's Fixed Size (in bytes)",
+                                        "type": "integer",
+                                        "minimum": 1
+                                },
+                                "FixedSizes": {
+                                        "description": "Packet's List of Fixed Sizes (in bytes)",
+                                        "type": "array",
+                                        "item": {
+                                                "type": "integer",
+                                                "minimum": 1
+                                        },
+                                        "minItems": 1
+                                },
+                                "MinimumSize": {
+                                        "description": "Packet's Minimum Size (in bytes)",
+                                        "type": "integer",
+                                        "minimum": 1
+                                }
+                        },
+                        "oneOf": [
+                                {
+                                        "required": [
+                                                "Version",
+                                                "Body",
+                                                "Code",
+                                                "From",
+                                                "FixedSize"
+                                        ]
+                                },
+                                {
+                                        "required": [
+                                                "Version",
+                                                "Body",
+                                                "Code",
+                                                "From",
+                                                "FixedSizes"
+                                        ]
+                                },
+                                {
+                                        "required": [
+                                                "Version",
+                                                "Body",
+                                                "Code",
+                                                "From",
+                                                "MinimumSize"
+                                        ]
+                                }
+                        ],
+                        "additionalProperties": false
+                }
+        }
+}

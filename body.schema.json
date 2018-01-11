@@ -1,0 +1,98 @@
+{
+        "$schema": "http://json-schema.org/draft-06/schema#",
+        "title": "Packet or Structure Body",
+        "description": "Packet or Structure fields representation",
+        "type": "array",
+        "items": {
+                "$ref": "#/definitions/field"
+        },
+        "definitions": {
+                "field": {
+                        "type": "object",
+                        "patternProperties": {
+                                "^[a-zA-Z]+$": {
+                                        "oneOf": [
+                                                {
+                                                        "$ref": "#/definitions/fieldContent"
+                                                },
+                                                {
+                                                        "$ref": "#/definitions/fieldEnumFlags"
+                                                },
+                                                {
+                                                        "$ref": "#/definitions/fieldObject"
+                                                }
+                                        ]
+                                }
+                        },
+                        "maxProperties": 1
+                },
+                "fieldEnumFlags": {
+                        "description": "Field's Name",
+                        "type": "object",
+                        "properties": {
+                                "Type": {
+                                        "description": "Field's Type",
+                                        "type": "string",
+                                        "enum": [
+                                                "enumeration",
+                                                "flags"
+                                        ]
+                                },
+                                "Values": {
+                                        "description": "Values definitions for Enumeration or Flags field",
+                                        "type": "array",
+                                        "items": {
+                                                "type": "object",
+                                                "patternProperties": {
+                                                        "^([0-9]+)|(0x[0-9a-fA-F]+)$": {
+                                                                "description": "Key Value Pair",
+                                                                "type": "string",
+                                                                "minLength": 1
+                                                        }
+                                                },
+                                                "maxProperties": 1,
+                                                "additionalProperties": false
+                                        }
+                                },
+                                "BitRange": {
+                                        "description":"Initialize field from selected Bits",
+                                        "type": "string",
+                                        "pattern": "^(([0-9]+|([0-9]+\\.\\.[0-9]+))( *, *|$))+$"
+                                }
+                        },
+                        "additionalProperties": false
+                },
+                "fieldObject": {
+                        "description": "Field's Name",
+                        "type": "object",
+                        "properties": {
+                                "Type": {
+                                        "description": "Field's Type",
+                                        "type": "string",
+                                        "pattern": "^[A-Z]"
+                                }
+                        }
+                },
+                "fieldContent": {
+                        "description": "Field's Name",
+                        "type": "object",
+                        "properties": {
+                                "Type": {
+                                        "description": "Field's Type",
+                                        "type": "string",
+                                        "enum": [
+                                                "number",
+                                                "low endian number",
+                                                "boolean",
+                                                "binary",
+                                                "char",
+                                                "string"
+                                        ]
+                                }
+                        },
+                        "required": [
+                                "Type"
+                        ]
+                }
+        }
+}
